@@ -61,3 +61,4 @@ buck-out/
 /vendor/bundle/
 
 .env
+android/app/google-services.json
