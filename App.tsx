@@ -8,19 +8,17 @@
  * @format
  */
 
-import React from 'react';
-import {useColorScheme} from 'react-native';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {NativeBaseProvider} from 'native-base';
+import React from 'react';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-import BaseBox from './src/common/components/BaseBox';
-import BaseHeader from './src/common/components/BaseHeader';
+import MainScreen from './src';
 
 const App = () => {
   return (
     <NativeBaseProvider>
       <SafeAreaProvider>
-        <BaseHeader />
+        <MainScreen />
       </SafeAreaProvider>
     </NativeBaseProvider>
   );
