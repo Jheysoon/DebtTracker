@@ -7,6 +7,7 @@ module.exports = {
   ],
   plugins: [
     ['module:react-native-dotenv'],
+    ['nativewind/babel'],
     [
       '@babel/plugin-transform-react-jsx',
       {
