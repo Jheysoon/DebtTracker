@@ -8,8 +8,11 @@
  * @format
  */
 
+import {
+  MD3LightTheme as DefaultTheme,
+  Provider as PaperProvider,
+} from 'react-native-paper';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
 
 import MainScreen from './src';
 
