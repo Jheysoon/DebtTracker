@@ -1,4 +1,4 @@
-import BaseHeader from './common/components/BaseHeader';
+import BaseHeader from '~/common/components/BaseHeader';
 
 const MainScreen = () => {
   return <BaseHeader />;
