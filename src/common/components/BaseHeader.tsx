@@ -3,10 +3,8 @@ import {Appbar} from 'react-native-paper';
 const BaseHeader = () => {
   return (
     <Appbar.Header>
-      <Appbar.BackAction onPress={() => {}} />
-      <Appbar.Content title="Title" />
-      <Appbar.Action icon="calendar" onPress={() => {}} />
-      <Appbar.Action icon="magnify" onPress={() => {}} />
+      <Appbar.Action icon="menu" onPress={() => {}} />
+      <Appbar.Content title="Debt Tracker" />
     </Appbar.Header>
   );
 };
