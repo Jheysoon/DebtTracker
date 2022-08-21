@@ -1,0 +1,6 @@
+{
+  "java.configuration.updateBuildConfiguration": "disabled",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
+}
