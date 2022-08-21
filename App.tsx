@@ -9,14 +9,27 @@
  */
 
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
 
 import MainScreen from './src';
 
+const theme = {
+  ...DefaultTheme,
+  roundness: 2,
+  version: 3,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#0D47A1',
+  },
+};
+
 const App = () => {
   return (
-    <SafeAreaProvider>
-      <MainScreen />
-    </SafeAreaProvider>
+    <PaperProvider theme={theme}>
+      <SafeAreaProvider>
+        <MainScreen />
+      </SafeAreaProvider>
+    </PaperProvider>
   );
 };
 
