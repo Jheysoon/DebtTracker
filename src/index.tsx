@@ -1,7 +1,7 @@
 import {css} from '@emotion/native';
 
 import {ScrollView} from 'react-native';
-import {List} from 'react-native-paper';
+import {FAB, List} from 'react-native-paper';
 
 import BaseHeader from '~/common/components/BaseHeader';
 
@@ -29,9 +29,22 @@ const MainScreen = () => {
           />
         ))}
       </ScrollView>
+
+      <FAB
+        icon="plus"
+        style={fabStyle}
+        onPress={() => console.log('Pressed')}
+      />
     </>
   );
 };
+
+const fabStyle = css`
+  position: absolute;
+  margin: 16px;
+  right: 0;
+  bottom: 0;
+`;
 
 const listStyle = css`
   border-top-width: 1px;
