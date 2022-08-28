@@ -1,54 +1,20 @@
-import {css} from '@emotion/native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import {ScrollView} from 'react-native';
-import {FAB, List} from 'react-native-paper';
+import ListScreen from './screens/List';
 
-import BaseHeader from '~/common/components/BaseHeader';
-
-const sampleList = [
-  {
-    name: 'Jayson Martinez',
-  },
-  {
-    name: 'Jayson Martinez',
-  },
-];
+const Stack = createNativeStackNavigator();
 
 const MainScreen = () => {
   return (
     <>
-      <BaseHeader />
-      <ScrollView className="mx-3">
-        {sampleList.map((record, key) => (
-          <List.Item
-            key={key}
-            title={record.name}
-            left={props => <List.Icon {...props} icon="account" />}
-            right={props => <List.Icon {...props} icon="chevron-right" />}
-            style={key > 0 ? listStyle : null}
-          />
-        ))}
-      </ScrollView>
-
-      <FAB
-        icon="plus"
-        style={fabStyle}
-        onPress={() => console.log('Pressed')}
-      />
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="ListScreen">
+          <Stack.Screen name="ListScreen" component={ListScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </>
   );
 };
-
-const fabStyle = css`
-  position: absolute;
-  margin: 16px;
-  right: 0;
-  bottom: 0;
-`;
-
-const listStyle = css`
-  border-top-width: 1px;
-  border-top-color: #bdbdbd;
-`;
 
 export default MainScreen;
