@@ -9,7 +9,11 @@ const MainScreen = () => {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="ListScreen">
+        <Stack.Navigator
+          initialRouteName="ListScreen"
+          screenOptions={{
+            headerShown: false,
+          }}>
           <Stack.Screen name="ListScreen" component={ListScreen} />
         </Stack.Navigator>
       </NavigationContainer>
