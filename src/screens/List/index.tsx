@@ -1,9 +1,12 @@
 import {css} from '@emotion/native';
+import {useNavigation} from '@react-navigation/native';
 
 import {ScrollView} from 'react-native';
 import {FAB, List} from 'react-native-paper';
 
 import BaseHeader from '~/common/components/BaseHeader';
+
+import {NavigationProp} from '~/common/types/navigation';
 
 const sampleList = [
   {
@@ -15,6 +18,8 @@ const sampleList = [
 ];
 
 const ListScreen = () => {
+  const navigation = useNavigation<NavigationProp>();
+
   return (
     <>
       <BaseHeader />
@@ -33,7 +38,9 @@ const ListScreen = () => {
       <FAB
         icon="plus"
         style={fabStyle}
-        onPress={() => console.log('Pressed')}
+        onPress={() => {
+          navigation.navigate('CreateUser');
+        }}
       />
     </>
   );
