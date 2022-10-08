@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/native": "11.10.0",
     "@emotion/react": "11.10.0",
+    "@react-native-firebase/app": "15.7.0",
     "@react-navigation/native": "6.0.12",
     "@react-navigation/native-stack": "6.8.0",
     "@reduxjs/toolkit": "1.8.5",
