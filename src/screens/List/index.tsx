@@ -22,7 +22,7 @@ const ListScreen = () => {
 
   return (
     <>
-      <BaseHeader />
+      <BaseHeader title={'Debt Tracker'} />
       <ScrollView className="mx-3">
         {sampleList.map((record, key) => (
           <List.Item
